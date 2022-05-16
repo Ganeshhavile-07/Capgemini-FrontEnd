@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.Arrays;
+
+class myexception extends Exception{
+	myexception(String msg){
+		super(msg);
+	}
+}
+class YourException extends Exception{
+	YourException(String msg) {
+		// TODO Auto-generated constructor stub
+		super(msg);
+	}
+}
+public class Demo {
+
+	void m() throws myexception, YourException{
+		try {
+			throw new IOException("Foo") ;
+				
+			
+		}catch(Exception e) {
+			throw new YourException(e.getMessage());
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			new Demo().m();
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

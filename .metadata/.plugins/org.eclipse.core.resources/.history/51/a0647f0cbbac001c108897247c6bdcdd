@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         String [][]strings= {
+        		 {"A","Z"},
+        		 {"C","D","S"},
+        		 {"L"}
+         };
+         Arrays.sort(strings);
+         for(String []str:strings) {
+        	 for(String s:str) {
+        		System.out.println(s); 
+        	 }
+         }
+	}
+
+}
